@@ -6,15 +6,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-public class UserDAO2 {
+public class UserDAO {
 	
 	private Connection conn;//데이터베이스에 접근하게 해주는 하나의 객체
 	private PreparedStatement pstmt;
 	private ResultSet rs;//정보를 담을 수 있는 객체
 	
-	public UserDAO2() {//mysql에 접속을 하게 해줌,자동으로 데이터베이스 커넥션이 일어남
+	public UserDAO() {//mysql에 접속을 하게 해줌,자동으로 데이터베이스 커넥션이 일어남
 		try {//예외처리
-			String dbURL = "jdbc:mysql://localhost:3306/AJAX";
+			String dbURL = "jdbc:mysql://localhost:3306/ajax";
 			String dbID="root";
 			String dbPassword="1248";
 			Class.forName("com.mysql.jdbc.Driver");//mysql드라이버를 찾는다.

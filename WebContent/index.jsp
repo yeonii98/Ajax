@@ -34,7 +34,7 @@
 				}
 			}
 		}
-		function regiterFunction(){
+		function registerFunction(){
 			registerRequest.open("POST","./UserRegisterServlet?userName=" + encodeURIComponent(document.getElementById("registerName").value) +
 					"&userAge=" + encodeURIComponent(document.getElementById("registerAge").value) +
 					"&userGender=" + encodeURIComponent($('input[name=registerGender]:checked').val()) +

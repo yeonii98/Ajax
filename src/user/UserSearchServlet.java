@@ -24,8 +24,8 @@ public class UserSearchServlet extends HttpServlet {
 		if(userName == null) userName = "";
 		StringBuffer result = new StringBuffer("");
 		result.append("{\"result\":[");
-		UserDAO2 userDAO2 = new UserDAO2();
-		ArrayList<User> userList = userDAO2.search(userName);
+		UserDAO userDAO = new UserDAO();
+		ArrayList<User> userList = userDAO.search(userName);
 		for(int i=0;i<userList.size();i++) {
 			result.append("[{\"value\": \""+userList.get(i).getUserName() + "\"},");
 			result.append("{\"value\": \""+userList.get(i).getUserAge() + "\"},");
